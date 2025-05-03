@@ -66,3 +66,13 @@ pip install -r requirements.txt
 Manually download and install Moses and other dependencies (you'll need to look inside scripts/download_install_packages.sh to replicate its steps).
 
 Run the training logic by manually executing the code inside train.sh, or porting it to a Python script or notebook.
+
+
+# Code Changes:
+- enabled cuda in config file
+- uncommented device="0" in train.sh and made 0 into string
+- added CUDA_VISIBLE_DEVICES=$device to train.sh
+- uncommented cuda implementation as mentioned in exercise in JoeyNMT
+- implemented 2 python scripts:
+    - generate_table.py for generating the wanted table as a .csv file
+    - generate_lineplot.py for generating the wanted lineplot as a .png
